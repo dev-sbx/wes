@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+
+}
+html {
+  background-color: #000;
+  font-family: monospace;
+  font-size: 1.5vmin;
+}
+body > header, body > footer, .gif, .gif_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+}
+body > header {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+body > header p, body > footer img {
+  margin: 0 1rem;
+}
+body > header p:nth-of-type( 2 ), section, body > footer {
+  font-size: 1.5rem;
+}
+body > header span {
+  display: inline-block;
+  margin: 0 1rem;
+  border-style: none;
+  color: #f00;
+  letter-spacing: -0.25rem;
+  text-shadow: 0 0.02rem, 0 -0.02rem, -0.02rem 0, 0.02rem 0;  
+}
+main {
+  width: 85%;
+  margin: auto;
+  margin-top: 35rem;
+  padding: 2rem;
+  color: #fff;
+}
+.intro {
+
+}
+h1, h2 {
+  margin: 2rem;
+  margin-left: 0;
+  font-size: 4rem;
+}
+.lang {
+  margin-top: 8rem;
+}
+h4 {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  color: #000;
+  background-color: #e82;
+}
+h4:nth-of-type( 2 ) {
+  background-color: #09c;
+}
+h4:nth-of-type( 3 ) {
+  background-color: #ff0;
+}
+h4:nth-of-type( 4 ) {
+  background-color: #0f6;
+}
+h2 span:first-child, h5 {
+  font-size: 1.75rem
+}
+.scroll, .project header, .problems_wrap, .btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.scroll img {
+  display: block;
+  width: 2rem;
+  height: 2.5rem;
+  margin: 2rem;
+}
+.project header, .problems_wrap {
+  justify-content: flex-start;
+}
+h2 {
+  width: 20rem;
+  font-size: 3rem;
+}
+h2 span:first-child {
+  font-size: 1.5rem;
+}
+.project header p {
+  margin-top: -3.5rem;
+}
+[ src='img/git2.png' ] {
+  width: 3rem;
+}
+h5 {
+  margin: 0.5rem;
+  margin-left: 0;
+  color: #fd0;
+  text-transform: capitalize;
+}
+.problems_wrap, h6, .btn_wrap {
+  align-items: flex-start;
+  margin-top: 8rem;
+}
+.fixed {
+  margin-left: 10rem;
+}
+.fixed h5 {
+  margin: 0;
+}
+.fixed img {
+  float: right;
+}
+h6 {
+  text-align: center;
+}
+.btn_wrap {
+  justify-content: center;
+  position: relative;
+}
+.btn, .btn::after {
+  position: absolute;
+  top:0; left:0;  
+  z-index: 10;
+  height: 4rem;
+  width: 10rem;
+  padding: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #000;
+  color: #000;
+  cursor: pointer;
+  content: 'Old';
+}
+.btn {
+  position: relative;
+  z-index: 1;
+  margin: 0 3rem;
+  border-style: dashed;
+  border-width: 1rem;
+  border-color: #fff; 
+}
+.btn::after {
+  z-index: 2;
+  top: 0rem; left: -0.25rem;
+  width: 8rem;
+  height: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.25rem
+}
+.new {
+  border-color: #f6b;
+}
+.new::after {
+  content: 'New';
+}
+.gif, .gif_2 {
+  top: 4rem; left: 0;
+  height: 29rem;
+  background-color: #ddd;
+  background-color: #fff;
+  background-image: url( 'http://wesleycodes.tech/gifs/front_face_3' );
+  background-size: 68rem;
+  background-position: center -6rem;
+  background-repeat: no-repeat;  
+}
+.gif_2 {
+  display: none;
+  background-image: url( 'http://wesleycodes.tech/gifs/right_face.gif' );
+}
+.btn:hover ~ .gif_2 {
+  display: block;
+}
+.btn:nth-of-type( 1 ):hover ~ .preview {
+  background-image: url(http://wesleycodes.tech/images/old_salon.png);
+}
+.btn:nth-of-type( 2 ):hover ~ .preview {
+  background-image: url(http://wesleycodes.tech/images/new_salon.png);
+}
+.preview {
+  position: absolute;
+  top: 10rem;
+  width: 35rem;
+  height: 40rem;
+  border-style: dotted;
+  border-color: #fd0;
+  background-image: none;
+  background-size: cover;
+}
+body > footer {
+  justify-content: flex-start;
+  top: auto; bottom: 0;
+}
+body > footer img {
+  width: 2rem;
+}
+
+@media( min-width: 60rem ) {
+  .gif, .gif_2, .main {
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 5rem;
+    width: 47%;
+    height: 100%;
+    background-size: 90rem;
+    background-position: -26rem 10rem
+  }
+  main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 5rem;
+    width: 47%;
+    left: 50%;
+  }
+  .btn {
+    padding: 0 4rem;
+    left: 60%;
+    position: relative;
+    width: 100rem;
+  }
+  .preview {
+    left: 50%;
+    transform: translateX( -12% );
+  }
+}
